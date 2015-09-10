@@ -20,4 +20,12 @@ describe('piglatin', function () {
   it('returns for three consonants', function() {
     expect(piglatin('thrice')).to.equal('icethray');
   });
+
+  it('returns for qu exception', function() {
+    expect(piglatin('quality')).to.equal('alityquay');
+  });
+
+  it('treats y as a consonant', function(){
+    expect(piglatin('yellow')).to.equal('ellowyay');
+  });
 });
